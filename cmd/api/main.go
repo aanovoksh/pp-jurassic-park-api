@@ -2,8 +2,8 @@ package main
 
 import (
 	"log"
+	"pp-jurassic-park-api/internal/api/handlers"
 	"pp-jurassic-park-api/internal/db"
-	"pp-jurassic-park-api/internal/handlers"
 
 	"github.com/gin-gonic/gin"
 )

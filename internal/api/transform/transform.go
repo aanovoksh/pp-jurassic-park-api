@@ -1,8 +1,8 @@
 package transform
 
 import (
-	apimodels "pp-jurassic-park-api/internal/models/api"
-	dbmodels "pp-jurassic-park-api/internal/models/db"
+	apimodels "pp-jurassic-park-api/internal/api/models"
+	dbmodels "pp-jurassic-park-api/internal/db/models"
 )
 
 func CagesToApi(dbCages []dbmodels.Cage) []apimodels.Cage {

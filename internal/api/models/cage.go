@@ -9,14 +9,14 @@ const (
 
 type Cage struct {
 	ID           uint        `json:"id"`
-	Capacity     uint        `json:"capacity"`
+	Capacity     int         `json:"capacity"`
 	CurrentCount int         `json:"current_count"`
 	PowerStatus  PowerStatus `json:"power_status"`
 	Dinosaurs    []Dinosaur  `json:"dinosaurs"`
 }
 
 type CreateCageRequest struct {
-	Capacity    uint        `json:"capacity"`
+	Capacity    int         `json:"capacity"`
 	PowerStatus PowerStatus `json:"power_status"`
 }
 type CreateCageResponse struct {

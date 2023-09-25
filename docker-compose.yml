@@ -30,9 +30,6 @@ services:
       POSTGRES_DB: gormtest
     ports:
       - "5433:5432"
-    volumes:
-      - pgdata_test:/var/lib/postgresql/data
 
 volumes:
   pgdata_main:
-  pgdata_test:

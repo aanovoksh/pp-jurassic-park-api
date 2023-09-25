@@ -3,7 +3,7 @@ package db
 import (
 	"os"
 
-	models "pp-jurassic-park-api/internal/models/db"
+	dbmodels "pp-jurassic-park-api/internal/db/models"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -24,5 +24,5 @@ func Migrate() error {
 	if err != nil {
 		return err
 	}
-	return dbConn.AutoMigrate(&models.Cage{}, &models.Dinosaur{})
+	return dbConn.AutoMigrate(&dbmodels.Cage{}, &dbmodels.Dinosaur{})
 }

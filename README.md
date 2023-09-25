@@ -41,6 +41,7 @@ Following API endpoints are built to manage the Jurassic Park
 **Note**: Postman Collection is added to the github repo as well as a top level file. Feel free to pull it, import and play with existing APIs.
 
 ## Codebase Structure
+```
 /pp-jurassic-park-api
 ├── /cmd
 │   └── /ypi
@@ -58,6 +59,7 @@ Following API endpoints are built to manage the Jurassic Park
 ├── go.mod
 ├── dockerfile
 └── docker-compose.yml
+```
 
 ## Follow-ups and Improvements
 * Handler Code Refactoring

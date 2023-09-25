@@ -2,12 +2,12 @@
 
 ## Tech Stack
 
-- Go v1.21.1
--- gin v1.9.1
--- gorm v1.25.4
--- testify v1.8.4
-- PostgreSQL
--- latest docker image
+* Go v1.21.1
+  * gin v1.9.1
+  * gorm v1.25.4
+  * testify v1.8.4
+* PostgreSQL
+  * latest docker image
 
 ## Getting Started
 
@@ -27,16 +27,16 @@ Following API endpoints are built to manage the Jurassic Park
 
 | Route | HTTP Method | Description |  
 | ------ | ------ | ------ | 
-| `/cages` | GET | Query all cage details |
-| `/cages/:id` | GET | Query single cage details | 
-| `/cages` | POST | Create a new cage | 
-| `/cages/:id` | PATCH | Update power status at a cage | 
-| `/cages/:id` | DELETE | Delete the cage | 
-| `/dinosaurs` | GET | Query all dinosaur details |
-| `/dinosaurs/:id` | GET | Query single cage details |
-| `/dinosaurs` | POST | Add new dinosaur | 
-| `/dinosaurs/:id` | PATCH | Move dinosaur to a new cage | 
-| `/dinosaurs/:id` | DELETE | Remvoe dinosaur | 
+| `/cages` | GET | Query all cage details, including enclosed dinosaurs. Filterable by power status. |
+| `/cages/:id` | GET | Query single cage details, including enclosed dinosaurs. | 
+| `/cages` | POST | Create a new cage. | 
+| `/cages/:id` | PATCH | Update power status in the existing cage. | 
+| `/cages/:id` | DELETE | Delete the cage. | 
+| `/dinosaurs` | GET | Query all dinosaur details. Filterable by species. |
+| `/dinosaurs/:id` | GET | Query single dinosaur details. |
+| `/dinosaurs` | POST | Add new dinosaur to existing cage in the Park. | 
+| `/dinosaurs/:id` | PATCH | Move dinosaur from one cage to another. | 
+| `/dinosaurs/:id` | DELETE | Remove dinosaur from the Park. | 
 
 **Note**: Postman Collection is added to the github repo as well as a top level file. Feel free to pull it, import and play with existing APIs.
 

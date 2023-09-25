@@ -9,16 +9,23 @@ import (
 )
 
 func main() {
-	_, err := db.Connect()
+	// Run DB Migration
+	err := db.Migrate()
 	if err != nil {
-		log.Fatal("Could not connect to the database:", err)
+		log.Fatalf("Migration error: %v", err)
 	}
 
-	engine := gin.Default()
+	router := gin.Default()
 
-	engine.GET("/tests", handlers.Test)
+	// Cages API
+	router.GET("/cages", handlers.GetCages)
+	router.GET("/cages/:id", handlers.GetCage)
+	router.POST("/cages", handlers.CreateCage)
+	router.PATCH("/cages/:id", handlers.UpdateCagePowerStatus)
+	router.DELETE("/cages/:id", handlers.DeleteCage)
 
-	err = engine.Run()
+	// Start server
+	err = router.Run()
 	if err != nil {
 		log.Fatalf("Error starting server: %v", err)
 	}

@@ -24,6 +24,13 @@ func main() {
 	router.PATCH("/cages/:id", handlers.UpdateCagePowerStatus)
 	router.DELETE("/cages/:id", handlers.DeleteCage)
 
+	// Dinosaur API
+	router.GET("/dinosaurs", handlers.GetDinosaurs)
+	router.GET("/dinosaurs/:id", handlers.GetDinosaur)
+	router.POST("/dinosaurs", handlers.AddDinosaur)
+	router.PATCH("/dinosaurs/:id", handlers.MoveDinosaur)
+	router.DELETE("/dinosaurs/:id", handlers.RemoveDinosaur)
+
 	// Start server
 	err = router.Run()
 	if err != nil {

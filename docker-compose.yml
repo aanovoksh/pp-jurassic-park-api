@@ -9,7 +9,7 @@ services:
       - "8080:8080"
     depends_on:
       - postgres
-      - postgres-test
+      - postgrestest
     environment:
       DB_HOST: postgres
   postgres:
@@ -22,12 +22,12 @@ services:
       - "5432:5432"
     volumes:
       - pgdata_main:/var/lib/postgresql/data
-  postgres-test:
+  postgrestest:
     image: postgres:latest
     environment:
-      POSTGRES_USER: gorm-test
-      POSTGRES_PASSWORD: gorm-test
-      POSTGRES_DB: gorm-test
+      POSTGRES_USER: gormtest
+      POSTGRES_PASSWORD: gormtest
+      POSTGRES_DB: gormtest
     ports:
       - "5433:5432"
     volumes:

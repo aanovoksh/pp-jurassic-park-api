@@ -10,7 +10,7 @@ import (
 )
 
 const dsnMain = "host=postgres user=gorm password=gorm dbname=gorm sslmode=disable TimeZone=UTC"
-const dsnTest = "host=postgres-test user=gorm-test password=gorm-test dbname=gorm-test sslmode=disable TimeZone=UTC"
+const dsnTest = "host=postgrestest user=gormtest password=gormtest dbname=gormtest sslmode=disable TimeZone=UTC"
 
 func Connect() (*gorm.DB, error) {
 	if os.Getenv("GO_ENV") == "test" {
